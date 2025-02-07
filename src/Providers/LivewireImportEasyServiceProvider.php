@@ -2,14 +2,14 @@
 
 namespace Gsferro\LivewireImportEasy\Providers;
 
-use Gsferro\ResourceCrudEasy\Commands\{ResourceCrudEasyModelCommand, ResourceCrudEasyChoiceTableCommand};
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Filesystem\Filesystem;
 
 class LivewireImportEasyServiceProvider extends ServiceProvider
 {
-    public function boot()
+    private string $pathPackage = 'livewire-import-easy';
+
+    public function boot(): void
     {
         $this->publisher();
         $this->blades();
@@ -25,7 +25,7 @@ class LivewireImportEasyServiceProvider extends ServiceProvider
         | Components
         |
         */
-        $path = 'components.vendor.livewire-import-easy';
+        $path = 'components.'. $this->pathPackage;
         Blade::component($path.'.import-easy', 'livewire-import-easy');
         Blade::component($path.'.import-finished', 'livewire-import-easy-finished');
         Blade::component($path.'.update-import-progress', 'livewire-update-import-easy-progress');
@@ -39,7 +39,7 @@ class LivewireImportEasyServiceProvider extends ServiceProvider
         |---------------------------------------------------
         */
         $this->publishes([
-            __DIR__ . '/../views/components' => resource_path('views/components/vendor/livewire-import-easy'),
+            __DIR__ . '/../views/components' => resource_path('views/components/' . $this->pathPackage),
         ], 'views');
     }
 }

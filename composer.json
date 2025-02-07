@@ -20,5 +20,12 @@
     "psr-4": {
       "Gsferro\\LivewireImportEasy\\": "src/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Gsferro\\LivewireImportEasy\\Providers\\LivewireImportEasyServiceProvider"
+      ]
+    }
   }
 }

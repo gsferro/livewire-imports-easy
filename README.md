@@ -36,3 +36,18 @@ php artisan vendor:publish --provider="Gsferro\LivewireImportEasy\Providers\Live
 
 - Modifique seu component Livewire para extender `\Gsferro\LivewireImportEasy\Livewire\LivewireImportEasy`
 - Na sua view, utilize o component `<x-livewire-import-easy importClass="\App\Imports\<ClassImport>" lazy />`
+
+
+## Contribuição
+
+Se você deseja contribuir com o `LivewireImportEasy`, por favor, siga as seguintes etapas:
+
+1. Faça um fork do repositório.
+1. Crie uma branch para sua contribuição.
+1. Faça as alterações necessárias.
+1. Envie um pull request.
+
+## License
+
+O `LivewireImportEasy` é licenciado sob a licença MIT. Leia o arquivo **[LICENSE](https://opensource.org/licenses/MIT)
+** para mais informações.
