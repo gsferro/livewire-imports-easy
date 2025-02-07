@@ -60,17 +60,15 @@ class LivewireImportEasy extends Component
     public string $importingMessage = 'Importando... por favor aguarde.';
     public bool $importFinishedMessageShow = true;
     public string $importFinishedMessage = 'Importação realizada com sucesso!';
+    public string $label = 'Importar';
+    public string $icon = 'fa-solid fa-upload';
 
-
-    public function mount(string $importClass, ?string $accept = null): void
+    public function mount(): void
     {
         // TODO melhorar validação
-        if (! class_exists($importClass)) {
+        if (! class_exists($this->importClass)) {
             abort(404, 'Import class not found');
         }
-
-        $this->importClass = $importClass;
-        $this->accept      = $accept;
     }
 
     public function updatedImportFile(): void
