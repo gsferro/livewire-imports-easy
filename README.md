@@ -52,6 +52,17 @@ php artisan vendor:publish --provider="Gsferro\LivewireImportEasy\Providers\Live
     />
     ```
 
+## Customização
+- Informações que podem ser customizados fazendo override de atributos:
+   ```php 
+  public bool   $importingMessageShow = true;
+  public string $importingMessage = 'Importando... por favor aguarde.';
+  public bool   $importFinishedMessageShow = true;
+  public string $importFinishedMessage = 'Importação realizada com sucesso!';
+  public string $label = 'Importar';
+  public string $icon = 'fa-solid fa-upload';
+  ```
+
 ## Contribuição
 
 Se você deseja contribuir com o `LivewireImportEasy`, por favor, siga as seguintes etapas:
