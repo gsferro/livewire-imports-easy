@@ -23,7 +23,7 @@ Componente Livewire pronto para importação de arquivos de forma easy
 ## Instalação:
 
 ```shell 
- composer gsferro/livewire-import-easy
+ composer require gsferro/livewire-import-easy
 ```
 
 ## Publicação
